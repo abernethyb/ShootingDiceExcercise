@@ -14,6 +14,11 @@ namespace ShootingDice
             SmackTalkingPlayer Bobly = new SmackTalkingPlayer();
             Bobly.Name = "Bobbily";
 
+            OneHigherPlayer lucky = new OneHigherPlayer();
+            lucky.Name = "Lucky MacDucky";
+
+            lucky.Play(Buba);
+
             Player player1 = new Player();
             player1.Name = "Bob";
 
