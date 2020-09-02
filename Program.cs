@@ -19,6 +19,12 @@ namespace ShootingDice
 
             lucky.Play(Buba);
 
+            HumanPlayer user1 = new HumanPlayer();
+            Console.Write("What's your name? ");
+            user1.Name = Console.ReadLine();
+
+            Bobly.Play(user1);
+
             Player player1 = new Player();
             player1.Name = "Bob";
 
