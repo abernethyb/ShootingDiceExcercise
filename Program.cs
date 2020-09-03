@@ -8,6 +8,7 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+            //defining players
             SmackTalkingPlayer Buba = new SmackTalkingPlayer();
             Buba.Name = "Bubba";
             Buba.Taunt = "BOOOOOO!!!!";
@@ -16,25 +17,11 @@ namespace ShootingDice
 
             UpperHalfPlayer pierre = new UpperHalfPlayer();
             pierre.Name = "Pierre Artoise";
-
-            pierre.Play(Buba);
-
             OneHigherPlayer lucky = new OneHigherPlayer();
             lucky.Name = "Lucky MacDucky";
-
-            lucky.Play(Buba);
-
             CreativeSmackTalkingPlayer Frenchie = new CreativeSmackTalkingPlayer();
             Frenchie.Name = "Hercule";
             Frenchie.Taunt = Frenchie.SelectTaunt();
-
-            Frenchie.Play(Buba);
-
-            HumanPlayer user1 = new HumanPlayer();
-            Console.Write("What's your name? ");
-            user1.Name = Console.ReadLine();
-
-            Bobly.Play(user1);
 
             SoreLoserPlayer steve = new SoreLoserPlayer();
             steve.Name = "steve";
@@ -42,36 +29,48 @@ namespace ShootingDice
             SoreLoserUpperHalfPlayer stephan = new SoreLoserUpperHalfPlayer();
             stephan.Name = "stephan Artoise";
 
-            stephan.Play(Bobly);
-
-            steve.Play(Frenchie);
-
             Player player1 = new Player();
             player1.Name = "Bob";
 
             Player player2 = new Player();
             player2.Name = "Sue";
 
-            player2.Play(player1);
-            Buba.Play(player1);
-
-            Console.WriteLine("-------------------");
-
             Player player3 = new Player();
             player3.Name = "Wilma";
 
-            player3.Play(player2);
-
-            Console.WriteLine("-------------------");
+            HumanPlayer user1 = new HumanPlayer();
+            Console.Write("What's your name? ");
+            user1.Name = Console.ReadLine();
 
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
 
-            player1.Play(large);
+            //pierre.Play(Buba);
+
+            //lucky.Play(Buba);
+
+            // Frenchie.Play(Buba);
+
+            //Bobly.Play(user1);
+
+            //stephan.Play(Bobly);
+
+            //steve.Play(Frenchie);
+
+            // player2.Play(player1);
+            // Buba.Play(player1);
 
             Console.WriteLine("-------------------");
 
-            stephan.Play(user1);
+            // player3.Play(player2);
+
+            Console.WriteLine("-------------------");
+
+            // player1.Play(large);
+
+            Console.WriteLine("-------------------");
+
+            // stephan.Play(user1);
 
             List<Player> players = new List<Player>()
             {
@@ -80,7 +79,13 @@ namespace ShootingDice
                 player3,
                 Buba,
                 Bobly,
-                large
+                large,
+                stephan,
+                steve,
+                Frenchie,
+                pierre,
+                lucky,
+                user1
             };
 
             PlayMany(players);
