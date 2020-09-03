@@ -39,6 +39,11 @@ namespace ShootingDice
             SoreLoserPlayer steve = new SoreLoserPlayer();
             steve.Name = "steve";
 
+            SoreLoserUpperHalfPlayer stephan = new SoreLoserUpperHalfPlayer();
+            stephan.Name = "stephan Artoise";
+
+            stephan.Play(Bobly);
+
             steve.Play(Frenchie);
 
             Player player1 = new Player();
@@ -66,6 +71,8 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            stephan.Play(user1);
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -76,7 +83,7 @@ namespace ShootingDice
                 large
             };
 
-           PlayMany(players);
+            PlayMany(players);
         }
 
         static void PlayMany(List<Player> players)
