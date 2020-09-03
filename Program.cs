@@ -14,6 +14,11 @@ namespace ShootingDice
             SmackTalkingPlayer Bobly = new SmackTalkingPlayer();
             Bobly.Name = "Bobbily";
 
+            UpperHalfPlayer pierre = new UpperHalfPlayer();
+            pierre.Name = "Pierre Artoise";
+
+            pierre.Play(Buba);
+
             OneHigherPlayer lucky = new OneHigherPlayer();
             lucky.Name = "Lucky MacDucky";
 
@@ -25,11 +30,11 @@ namespace ShootingDice
 
             Frenchie.Play(Buba);
 
-            // HumanPlayer user1 = new HumanPlayer();
-            // Console.Write("What's your name? ");
-            // user1.Name = Console.ReadLine();
+            HumanPlayer user1 = new HumanPlayer();
+            Console.Write("What's your name? ");
+            user1.Name = Console.ReadLine();
 
-            // Bobly.Play(user1);
+            Bobly.Play(user1);
 
             SoreLoserPlayer steve = new SoreLoserPlayer();
             steve.Name = "steve";
@@ -71,7 +76,7 @@ namespace ShootingDice
                 large
             };
 
-            PlayMany(players);
+           PlayMany(players);
         }
 
         static void PlayMany(List<Player> players)
