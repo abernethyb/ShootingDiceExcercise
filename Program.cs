@@ -31,6 +31,11 @@ namespace ShootingDice
 
             // Bobly.Play(user1);
 
+            SoreLoserPlayer steve = new SoreLoserPlayer();
+            steve.Name = "steve";
+
+            steve.Play(Frenchie);
+
             Player player1 = new Player();
             player1.Name = "Bob";
 
